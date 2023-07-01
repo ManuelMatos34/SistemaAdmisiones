@@ -44,5 +44,9 @@ namespace SistemaDeAdmisionesAPI.Controllers
             return Ok(resultado.ToList());
 
         }
+
+
+
+
     }
 }

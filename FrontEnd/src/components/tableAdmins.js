@@ -12,7 +12,6 @@ function TableAdmins() {
             getAdmins(estatus, busqueda)
                 .then(response => {
                     setAdmins(response.data);
-                    console.log(response.data);
                 })
                 .catch(error => {
                     console.error(error);
