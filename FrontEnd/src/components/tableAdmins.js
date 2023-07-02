@@ -4,6 +4,10 @@ import { getAdmins } from "../services/services.js";
 import TabaleAdminsPagination from "./TabaleAdminsPagination.js";
 import ChildTableAdmins from "./ChildTableAdmins.js";
 import FormFilterAdmins from "./FormFilterAdmins.js";
+import ModalAddAdmin from "./ModalAddAdmin.js";
+import ModalEditAdmin from "./ModalEditAdmin.js";
+import ModalEstatusAdmin from "./ModalEstatusAdmin.js";
+import ModalEmailAdmin from "./ModalEmailAdmin.js";
 
 function TableAdmins() {
   const [estatus, setEstatus] = useState("");
@@ -42,6 +46,10 @@ function TableAdmins() {
 
   return (
     <div className="mt-5 container custom-table-size">
+      <ModalAddAdmin/>
+      <ModalEditAdmin/>
+      <ModalEstatusAdmin/>
+      <ModalEmailAdmin/>
       <div className="container-fluid px-4">
         <div className="card">
           <div className="card-header d-flex align-items-center flex-row">
@@ -52,16 +60,16 @@ function TableAdmins() {
             <div className="table-responsive">
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <button className="btn btn-success m-1">
+                  <button className="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#ModalAddAdmin">
                     <i className="fas fa-plus"></i>
                   </button>
-                  <button className="btn btn-warning m-1">
+                  <button className="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#ModalEditAdmin">
                     <i className="fas fa-edit"></i>
                   </button>
-                  <button className="btn btn-danger m-1">
+                  <button className="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#ModalEstatusAdmin">
                     <i className="fas fa-trash"></i>
                   </button>
-                  <button className="btn btn-primary m-1">
+                  <button className="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#ModalEmailAdmin">
                     <i className="fas fa-envelope"></i>
                   </button>
                 </div>

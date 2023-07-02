@@ -5,18 +5,16 @@ function registroForm() {
   return (
     <div>
       <form>
+        <div className="form-floating mb-3">
+          <input
+            className="form-control"
+            id="inputFirstName"
+            type="text"
+            placeholder="Jhon Doe"
+          />
+          <label htmlFor="inputFirstName">Nombre Completo</label>
+        </div>
         <div className="row mb-3">
-          <div className="col-md-6">
-            <div className="form-floating mb-3 mb-md-0">
-              <input
-                className="form-control"
-                id="inputFirstName"
-                type="text"
-                placeholder="Jhon Doe"
-              />
-              <label htmlFor="inputFirstName">Nombre Completo</label>
-            </div>
-          </div>
           <div className="col-md-6">
             <div className="form-floating">
               <select className="form-select" id="inputLastName">
@@ -26,6 +24,17 @@ function registroForm() {
                 <option value="Williams">Transferido</option>
               </select>
               <label htmlFor="inputLastName">Tipo Estudiante</label>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="form-floating">
+              <select className="form-select" id="inputLastName">
+                <option value="">Selecciona</option>
+                <option value="Smith">Ing. Sistemas</option>
+                <option value="Johnson">Ing. Civil </option>
+                <option value="Williams">Ing Industrial</option>
+              </select>
+              <label htmlFor="inputLastName">Carrera</label>
             </div>
           </div>
         </div>
